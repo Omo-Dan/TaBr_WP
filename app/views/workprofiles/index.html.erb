@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Skills Hub Work Profiles</h1>
+
+<table class="table table-striped table-bordered  table-hover ">
+  <thead class="table-dark">
+    <tr>
+      <th>Position Title</th>
+      <th>Position name</th>
+      <th>Company</th>
+      <th>Industry</th>
+      <th>Experience type</th>
+      <th>Location</th>
+      <th>Start date</th>
+      <th>End date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @workprofiles.each do |workprofile| %>
+      <tr>
+        <td><%= workprofile.position_title %></td>
+        <td><%= workprofile.position_name %></td>
+        <td><%= workprofile.company %></td>
+        <td><%= workprofile.industry %></td>
+        <td><%= workprofile.experience_type %></td>
+        <td><%= workprofile.location %></td>
+        <td><%= workprofile.start_date %></td>
+        <td><%= workprofile.end_date %></td>
+        <td><%= link_to 'Show', workprofile %></td>
+        <td><%= link_to 'Edit', edit_workprofile_path(workprofile) %></td>
+        <td><%= link_to 'Destroy', workprofile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Workprofile', new_workprofile_path, class:'btn btn-dark' %>

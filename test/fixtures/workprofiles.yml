@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position_title: MyString
+  position_name: MyString
+  company: MyString
+  industry: MyString
+  experience_type: MyString
+  location: MyString
+  start_date: 2021-10-09
+  end_date: 2021-10-09
+
+two:
+  position_title: MyString
+  position_name: MyString
+  company: MyString
+  industry: MyString
+  experience_type: MyString
+  location: MyString
+  start_date: 2021-10-09
+  end_date: 2021-10-09

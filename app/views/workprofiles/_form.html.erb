@@ -1,0 +1,65 @@
+<%= form_with(model: workprofile) do |form| %>
+  <% if workprofile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workprofile.errors.count, "error") %> prohibited this workprofile from being saved:</h2>
+
+      <ul>
+        <% workprofile.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :position_title %>
+    <%= form.text_field :position_title, class:'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position_name %>
+    <%= form.text_field :position_name, class:'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, class:'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :industry %>
+    <%= form.text_field :industry, class:'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :experience_type %>
+    <%= form.radio_button :experience_type, 'Full-time' %> Full-time
+    <%= form.radio_button :experience_type, 'Part-time/ Temp/ Short contract' %> Part-time/ Temp/ Short contract
+    <%= form.radio_button :experience_type, 'Internship / Attachment' %> 
+    Internship / Attachment
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.country_select :location, selected:'KE', class:'form-control'%>
+  </div>
+
+  <div class="ongoing">
+  <%= form.label :Ongoing_work %>
+  <%= check_box_tag 'Ongoing_work',  class: "on" %> 
+</div>
+   
+  <div class="field">
+    <%= form.label :start_date %>
+    <%= form.date_select :start_date, { :discard_day => true}, class:"form-select" %>
+  </div>
+
+<div class="field ">
+    <%= form.label :end_date %>
+    <%= form.date_select :end_date, { :discard_day => true}, class:"form-select  end" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class:'btn btn-dark' %>
+  </div>
+<% end %>

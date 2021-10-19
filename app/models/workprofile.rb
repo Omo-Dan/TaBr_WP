@@ -1,0 +1,2 @@
+class Workprofile < ApplicationRecord
+end

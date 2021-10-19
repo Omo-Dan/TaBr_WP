@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position title:</strong>
+  <%= @workprofile.position_title %>
+</p>
+
+<p>
+  <strong>Position name:</strong>
+  <%= @workprofile.position_name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @workprofile.company %>
+</p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @workprofile.industry %>
+</p>
+
+<p>
+  <strong>Experience type:</strong>
+  <%= @workprofile.experience_type %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @workprofile.location %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @workprofile.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @workprofile.end_date %>
+</p>
+
+<p>
+  <strong>Duration</strong>
+  <%= (@workprofile.end_date.month+@workprofile.end_date.year*12)- (@workprofile.start_date.month+@workprofile.start_date.year*12) %>
+  
+
+</p>
+
+<%= link_to 'Edit', edit_workprofile_path(@workprofile) %> |
+<%= link_to 'Back', workprofiles_path %>
