@@ -1,11 +1,11 @@
-$(document).ready$(function(){
-		$(".on").click(function(event) {
-			var x = $(this).is(':checked');
-			if (x == true) {
-				$(this).parents(".ongoing").find('.end').hide();
-			}
-			else{
-				$(this).parents(".ongoing").find('.end').show();
-			}
-		});
+document.addEventListener("DOMContentLoaded", function(){	
+	$('#Ongoing_work').on('click', function () {
+		const checkBox = document.getElementById('Ongoing_work');
+		const endDate = document.getElementById('end_date')
+		if (checkBox.checked) {
+			endDate.hidden = true;
+		} else {
+			endDate.hidden = false;
+		}
 	})
+});

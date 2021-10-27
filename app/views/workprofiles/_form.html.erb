@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'workprofile' %>
+
 <%= form_with(model: workprofile) do |form| %>
   <% if workprofile.errors.any? %>
     <div id="error_explanation">
@@ -45,16 +47,16 @@
   </div>
 
   <div class="ongoing">
-  <%= form.label :Ongoing_work %>
-  <%= check_box_tag 'Ongoing_work',  class: "on" %> 
-</div>
+    <%= form.label :Ongoing_work %>
+    <%= check_box_tag 'Ongoing_work', class: "on" %> 
+  </div>
    
   <div class="field">
     <%= form.label :start_date %>
     <%= form.date_select :start_date, { :discard_day => true}, class:"form-select" %>
   </div>
 
-<div class="field ">
+<div id="end_date" class="field">
     <%= form.label :end_date %>
     <%= form.date_select :end_date, { :discard_day => true}, class:"form-select  end" %>
   </div>
@@ -63,3 +65,4 @@
     <%= form.submit class:'btn btn-dark' %>
   </div>
 <% end %>
+
