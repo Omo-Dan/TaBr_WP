@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= form.label :position_name %>
-    <%= form.text_field :position_name, class:'form-control' %>
+    <%= form.select :position_id, Position.all.collect{|p| [p.titles, p.id]},{}, class:'form-control' %>
   </div>
 
   <div class="field">
