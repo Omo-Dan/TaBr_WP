@@ -11,7 +11,7 @@ csv_text = File.read(Rails.root.join('lib', 'seeds', 'titles.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
     t = Position.new
-    t.Title = row ['title']
+    t.title = row ['Title']
     t.save
   end
 
