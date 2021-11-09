@@ -65,7 +65,7 @@ class WorkprofilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def workprofile_params
-      params.require(:workprofile).permit(:position_title, :position_name, :company, :industry, :experience_type, :location, :start_date, :end_date)
+      params.require(:workprofile).permit(:position_title, :position_name, :company, :industry, :experience_type, :location, :start_date, :end_date, :position_id)
     end
 
     

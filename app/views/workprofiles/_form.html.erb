@@ -20,7 +20,8 @@
 
   <div class="field">
     <%= form.label :position_name %>
-    <%= form.text_field :position_name, class:'form-control' %>
+    <%= form.select :position_id, Position.all.collect{|p| [p.titles, p.id]},{}, 
+    class:'form-control', :id => "position_title"%>
   </div>
 
   <div class="field">
@@ -30,7 +31,7 @@
 
   <div class="field">
     <%= form.label :industry %>
-    <%= form.text_field :industry, class:'form-control' %>
+    <%= form.select :industry, Industry.all.collect{|i| [i.industry, i.id]},{}, class:'form-control' %>
   </div>
 
   <div class="field">
@@ -65,4 +66,9 @@
     <%= form.submit class:'btn btn-dark' %>
   </div>
 <% end %>
+
+<script>
+$('#position_title').select2();
+</script>
+
 

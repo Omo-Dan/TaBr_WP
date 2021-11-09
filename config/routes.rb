@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :industries
+  resources :positions
   resources :projects
   get 'projects/index'
   resources :workprofiles
