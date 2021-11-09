@@ -54,3 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'country_select', '~> 6.0'
 
+gem 'linkedin_industries', '~> 1.0'
+
+gem 'select2-rails-latest', '~> 4.0', '>= 4.0.5'
+
